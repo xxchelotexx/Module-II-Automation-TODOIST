@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Module_II_Automation</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.8" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
+    <PackageReference Include="coverlet.collector" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="resources\" />
+    <Folder Include="Todois\code\control\" />
+    <Folder Include="Todois\code\factoryBrowser\" />
+    <Folder Include="Todois\code\test\" />
+    <Folder Include="Todois\code\session\" />
+    <Folder Include="Todois\code\page\" />
+    <Folder Include="Yopmail\code\control\" />
+    <Folder Include="Yopmail\code\factoryBrowser\" />
+    <Folder Include="Yopmail\code\test\" />
+    <Folder Include="Yopmail\code\session\" />
+    <Folder Include="Yopmail\code\page\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module II Automation", "Module II Automation.csproj", "{FA0D9BBF-E5A4-406E-B429-4D8C4ECC4BB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA0D9BBF-E5A4-406E-B429-4D8C4ECC4BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA0D9BBF-E5A4-406E-B429-4D8C4ECC4BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA0D9BBF-E5A4-406E-B429-4D8C4ECC4BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA0D9BBF-E5A4-406E-B429-4D8C4ECC4BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63103AEA-2BE4-4A5A-886F-C57D98ACF452}
+	EndGlobalSection
+EndGlobal
