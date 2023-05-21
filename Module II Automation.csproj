@@ -25,10 +25,4 @@
     <Folder Include="Yopmail\code\page\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Todois\code\test\CrudProject.cs">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-  </ItemGroup>
-
 </Project>

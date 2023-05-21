@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel;
+using Module_II_Automation.Todois.code.factoryBrowser;
 using Module_II_Automation.Todois.code.page;
 
 namespace Module_II_Automation.Todois.code.test
 {
     [TestClass]
-    internal class CrudProject
+    public class CRUDVerification
     {
         MainPage mainPage = new MainPage();
         LoginSection loginSection = new LoginSection();
@@ -17,12 +17,14 @@ namespace Module_II_Automation.Todois.code.test
         TestBase testBase = new TestBase();
 
         [TestMethod]
-        public void VerifyCRUDProject() 
+
+        public void VerifyTheCRUDisSucessfuly() 
         {
+            //login
             testBase.OpenBrowser();
             mainPage.loginButton.Click();
-            loginSection.Login("ruizv.marcelo@gmail.com", "Mojix2023");
-
+            loginSection.Login("ruizv.marcelo@gmail.com","Mojix2023");
+         
             //create
             projectSection.newProjectButton.Click();
             projectSection.projectName.SetText("MarceloTest");
@@ -30,7 +32,7 @@ namespace Module_II_Automation.Todois.code.test
             projectSection.colorProjectSelector.Click();
             projectSection.projectSaveButton.Click();
 
-            Assert.IsTrue(projectSection.createdProjectLabel.IsControlDisplayed(), "Error no se creo el proyecto corrrectamente");
+            Assert.IsTrue(projectSection.ProjectNameIsDisplayed("MarceloTest"),"Error no se creo el proyecto corrrectamente");
 
             //edit
             projectSection.editProjectButton.Click();
@@ -38,16 +40,17 @@ namespace Module_II_Automation.Todois.code.test
             projectSection.projectName.SetText("MarceloEdited");
             projectSection.projectSaveButton.Click();
 
-            Assert.IsTrue(projectSection.assertProjectName.IsControlDisplayed(), "ERROR el proyecto no fue editado");
+            Assert.IsTrue(projectSection.ProjectNameIsDisplayed("MarceloEdited"), "ERROR el proyecto no fue editado");
 
             //delete
             projectSection.editProjectButton.Click();
             projectSection.deleteProjectMenu.Click();
             projectSection.deleteProjectButton.Click();
-            Assert.IsFalse(projectSection.assertProjectName.IsControlDisplayed(), "ERRO el proyecto no fue borrado");
+
+            Assert.IsFalse(projectSection.ProjectNameIsDisplayed("MarceloEdited"), "ERROR el proyecto no fue borrado");
 
             testBase.CloseBrowser();
-
         }
+        
     }
 }
