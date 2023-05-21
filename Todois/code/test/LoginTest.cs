@@ -19,7 +19,7 @@ namespace Module_II_Automation.Todois.code.test
         {
             mainPage.loginButton.Click();
             loginSection.emailTxtBox.SetText("ruizv.marcelo@gmail.com");
-            loginSection.pwdTxtBox.SetText("Mojix2023");
+            loginSection.pwdTxtBox.SetText("Mojix2022");
             loginSection.loginButton.Click();
 
 

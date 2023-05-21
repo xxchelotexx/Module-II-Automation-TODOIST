@@ -14,7 +14,7 @@ namespace Module_II_Automation.Todois.code.test
 
         public void OpenBrowser() 
         {
-            session.Session.Instance().GetBrowser().Navigate().GoToUrl("https://todo.ly");
+            session.Session.Instance().GetBrowser().Navigate().GoToUrl("https://todoist.com");
             
         }
 

@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="resources\" />
     <Folder Include="Yopmail\code\control\" />
     <Folder Include="Yopmail\code\factoryBrowser\" />
     <Folder Include="Yopmail\code\test\" />
