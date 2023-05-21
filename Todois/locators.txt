@@ -1,0 +1,3 @@
+login button ---- > //li/a[text()='Iniciar sesión']
+email text ----> //div/input[@id='element-0']
+pwd ----> //div/input[@id='element-3']
