@@ -1,3 +1,26 @@
-login button ---- > //li/a[text()='Iniciar sesión']
-email text ----> //div/input[@id='element-0']
-pwd ----> //div/input[@id='element-3']
+loginButton ---- > //li/a[text()='Iniciar sesión']
+emailEntry ----> //div/input[@id='element-0']
+pwdEntry ----> //div/input[@id='element-3']
+AssertLogin ----> _2a3b75a1 _509a57b4 e5a9206f _50ba6b6b _4a93668a f6342c26
+
+newProjectAddButton ----> //div/button[@class='_8313bd46 f169a390 _8b7f1a82 _8644eccb _2a3b75a1']
+projectName ----> //input [@id='edit_project_modal_field_name']
+newColorMenu ----> //button [@class='color_dropdown_toggle form_field_control']
+newColorSelector ----> dropdown-select-0-option-salmon
+projectSaveButton ----> //button[@type='submit']
+AssertProjectCreation ---->//a/span[text()='MarceloTest']
+
+editProjectButton ---> //ul[@id="projects_list"]/li[last()]/div/div/div/button
+editProjectMenu ----> //div[text()='Editar proyecto']
+projectName ----> //input [@id='edit_project_modal_field_name']
+projectSaveButton ----> //button[@type='submit']
+AssertProjectEdit ----> //a/span[text()='MarceloEdited']
+
+editProjectButton ---> //ul[@id="projects_list"]/li[last()]/div/div/div/button
+deleteProjectMenu ---> //div[text()='Eliminar proyecto']
+deleteProjectButton ----> //button[@class='_8313bd46 _7a4dbd5f _5e45d59f _2a3b75a1 _56a651f6']
+AssertProjectEdit ----> //a/span[text()='MarceloEdited']
+
+
+
+
