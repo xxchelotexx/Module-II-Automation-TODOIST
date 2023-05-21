@@ -13,5 +13,15 @@ namespace Module_II_Automation.Todois.code.page
         public TextBox emailTxtBox = new TextBox(By.XPath("//div/input[@id='element-0']"));
         public TextBox pwdTxtBox = new TextBox(By.XPath("//div/input[@id='element-3']"));
         public Button loginButton = new Button(By.XPath("//button[@data-gtm-id='start-email-login']"));
+        public void Login(String user, String pwd)
+
+        {
+            emailTxtBox.SetText(user);
+            pwdTxtBox.SetText(pwd);
+            loginButton.Click();
+
+        }
     }
+
+    
 }
