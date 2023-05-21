@@ -1,7 +1,8 @@
 loginButton ---- > //li/a[text()='Iniciar sesión']
 emailEntry ----> //div/input[@id='element-0']
 pwdEntry ----> //div/input[@id='element-3']
-AssertLogin ----> _2a3b75a1 _509a57b4 e5a9206f _50ba6b6b _4a93668a f6342c26
+
+AssertLogin ----> //button[@class='left_menu_toggle top_bar_btn']
 
 newProjectAddButton ----> //div/button[@class='_8313bd46 f169a390 _8b7f1a82 _8644eccb _2a3b75a1']
 projectName ----> //input [@id='edit_project_modal_field_name']
