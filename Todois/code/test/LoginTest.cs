@@ -14,12 +14,14 @@ namespace Module_II_Automation.Todois.code.test
         MainPage mainPage = new MainPage();
         LoginSection loginSection = new LoginSection();
         ProjectSection projectSection = new ProjectSection();
+        TestBase testBase = new TestBase();
 
         [TestMethod]
 
         public void VerifyTheLoginIsSuccessfuly() 
         {
-            session.Session.Instance().GetBrowser().Navigate().GoToUrl("https://todoist.com");
+            testBase.OpenBrowser();
+            //session.Session.Instance().GetBrowser().Navigate().GoToUrl("https://todoist.com");
             mainPage.loginButton.Click();
             loginSection.Login("ruizv.marcelo@gmail.com","Mojix2023");
          
@@ -46,11 +48,8 @@ namespace Module_II_Automation.Todois.code.test
             projectSection.deleteProjectButton.Click();
             Assert.IsFalse(projectSection.assertProjectName.IsControlDisplayed(), "ERRO el proyecto no fue borrado");
 
+            testBase.CloseBrowser();
         }
-        [TestCleanup]
-        public void CloseBrowser()
-        {
-            session.Session.Instance().CloseBrowser();
-        }
+        
     }
 }
