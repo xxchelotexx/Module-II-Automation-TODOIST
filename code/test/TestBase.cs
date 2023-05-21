@@ -11,7 +11,7 @@ namespace Module_II_Automation.Todois.code.test
     [TestClass]
     public class TestBase
     {
-        [TestMethod]
+        [TestInitialize]
 
         public void OpenBrowser() 
         {

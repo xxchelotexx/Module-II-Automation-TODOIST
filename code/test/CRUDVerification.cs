@@ -9,7 +9,7 @@ using Module_II_Automation.Todois.code.page;
 namespace Module_II_Automation.Todois.code.test
 {
     [TestClass]
-    public class CRUDVerification
+    public class CRUDVerification : TestBase
     {
         MainPage mainPage = new MainPage();
         LoginSection loginSection = new LoginSection();
@@ -21,7 +21,6 @@ namespace Module_II_Automation.Todois.code.test
         public void VerifyTheCRUDisSucessfuly() 
         {
             //login
-            testBase.OpenBrowser();
             mainPage.loginButton.Click();
             loginSection.Login("ruizv.marcelo@gmail.com","Mojix2023");
          
@@ -48,8 +47,7 @@ namespace Module_II_Automation.Todois.code.test
             projectSection.deleteProjectButton.Click();
 
             Assert.IsFalse(projectSection.ProjectNameIsDisplayed("MarceloEdited"), "ERROR el proyecto no fue borrado");
-
-            testBase.CloseBrowser();
+                        
         }
         
     }
