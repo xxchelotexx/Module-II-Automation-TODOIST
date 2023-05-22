@@ -11,6 +11,6 @@ namespace Module_II_Automation.Todois.code.page
     
     public class MainPage
     {
-        public Button loginButton = new Button(By.XPath("//li/a[text()='Iniciar sesión']"));
+        public Button loginButton = new Button(By.XPath("//li/a[@href=\"/auth/login\"]"));
     }
 }

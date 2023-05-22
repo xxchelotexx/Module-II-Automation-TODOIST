@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,12 +15,16 @@ namespace Module_II_Automation.Todois.code.test
         MainPage mainPage = new MainPage();
         LoginSection loginSection = new LoginSection();
         ProjectSection projectSection = new ProjectSection();
-        TestBase testBase = new TestBase();
+        
+       
 
         [TestMethod]
 
         public void VerifyTheCRUDisSucessfuly() 
         {
+            
+
+            
             //login
             mainPage.loginButton.Click();
             loginSection.Login("ruizv.marcelo@gmail.com","Mojix2023");
