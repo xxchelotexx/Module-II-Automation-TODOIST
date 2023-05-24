@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Collections.Specialized;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,8 +16,8 @@ namespace Module_II_Automation.Todois.code.test
         MainPage mainPage = new MainPage();
         LoginSection loginSection = new LoginSection();
         ProjectSection projectSection = new ProjectSection();
-        
-       
+
+               
 
         [TestMethod]
 
@@ -29,7 +30,7 @@ namespace Module_II_Automation.Todois.code.test
             mainPage.loginButton.Click();
             loginSection.Login("ruizv.marcelo@gmail.com","Mojix2023");
          
-            //create
+            //create Project
             projectSection.newProjectButton.Click();
             projectSection.projectName.SetText("MarceloTest");
             projectSection.colorProjectMenu.Click();
@@ -37,21 +38,24 @@ namespace Module_II_Automation.Todois.code.test
             projectSection.projectSaveButton.Click();
 
             Assert.IsTrue(projectSection.ProjectNameIsDisplayed("MarceloTest"),"Error no se creo el proyecto corrrectamente");
+            Thread.Sleep(500);
 
-            //edit
+            //edit Project
             projectSection.editProjectButton.Click();
             projectSection.editProjectMenu.Click();
             projectSection.projectName.SetText("MarceloEdited");
             projectSection.projectSaveButton.Click();
 
             Assert.IsTrue(projectSection.ProjectNameIsDisplayed("MarceloEdited"), "ERROR el proyecto no fue editado");
+            Thread.Sleep(500);
 
-            //delete
+            //delete Project
             projectSection.editProjectButton.Click();
             projectSection.deleteProjectMenu.Click();
             projectSection.deleteProjectButton.Click();
 
             Assert.IsFalse(projectSection.ProjectNameIsDisplayed("MarceloEdited"), "ERROR el proyecto no fue borrado");
+            Thread.Sleep(500);
                         
         }
         
